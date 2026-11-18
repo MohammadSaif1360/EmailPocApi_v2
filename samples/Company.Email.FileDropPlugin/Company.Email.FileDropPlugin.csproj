@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Example runtime plugin (Approach 3). The demo app does NOT reference this project.
+    Build it into the demo's plugins folder and the app picks it up at startup:
+      dotnet build samples/Company.Email.FileDropPlugin -o samples/Email.Demo/bin/Debug/net8.0/plugins
+  -->
+  <PropertyGroup>
+    <Description>Writes emails to .txt files in an outbox folder. Loaded at runtime as a plugin.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Private=false: don't copy Company.Email.*.dll next to the plugin; the host already has them. -->
+    <ProjectReference Include="..\..\src\Company.Email.Core\Company.Email.Core.csproj" Private="false" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>

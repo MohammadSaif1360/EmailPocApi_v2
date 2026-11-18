@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!--
+    Real-world sample: an ASP.NET Core Web API that uses the reusable email library.
+    Open https://localhost:7180/swagger after pressing F5.
+  -->
+  <PropertyGroup>
+    <UserSecretsId>email-poc-api</UserSecretsId>
+    <!-- Feeds the /// comments into Swagger -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Only the providers this app wants. Remove a line and that provider's SDK is gone. -->
+    <ProjectReference Include="..\..\src\Company.Email.Core\Company.Email.Core.csproj" />
+    <ProjectReference Include="..\..\src\Company.Email.AzureAcs\Company.Email.AzureAcs.csproj" />
+    <ProjectReference Include="..\..\src\Company.Email.Smtp\Company.Email.Smtp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+</Project>

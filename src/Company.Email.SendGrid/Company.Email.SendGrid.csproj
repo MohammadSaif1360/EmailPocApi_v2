@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Calls the SendGrid v3 REST API directly with HttpClient: no SendGrid SDK needed. -->
+  <PropertyGroup>
+    <Description>Twilio SendGrid provider for Company.Email.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Email.Core\Company.Email.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+  </ItemGroup>
+</Project>

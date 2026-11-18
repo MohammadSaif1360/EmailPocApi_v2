@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Contracts only: no dependencies, so every app and provider can reference it -->
+  <PropertyGroup>
+    <Description>Contracts for the reusable email notification library.</Description>
+  </PropertyGroup>
+</Project>

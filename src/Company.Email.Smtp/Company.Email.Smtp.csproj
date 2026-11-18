@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Generic SMTP provider (MailKit) for Company.Email. Works with any SMTP server, including ACS, SES and SendGrid SMTP endpoints.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Email.Core\Company.Email.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.*" />
+  </ItemGroup>
+</Project>

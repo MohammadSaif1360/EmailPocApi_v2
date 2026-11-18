@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Amazon SES (v2 API) provider for Company.Email.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Email.Core\Company.Email.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.SimpleEmailV2" Version="3.7.*" />
+    <!-- Builds the raw MIME message when the email has attachments -->
+    <PackageReference Include="MimeKit" Version="4.*" />
+  </ItemGroup>
+</Project>
